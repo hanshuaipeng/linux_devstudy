@@ -2,6 +2,14 @@ Linux驱动学习
 
 LED驱动
 
+编译驱动
+
+make
+
+编译APP
+
+arm-linux-gnueabihf-gcc led_APP.c -o led_APP
+
 使用步骤
 
 1、加载驱动

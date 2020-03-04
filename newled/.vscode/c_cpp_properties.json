@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/han/linux/kernel/ebf_6ull_linux/include",
+                "/home/han/linux/kernel/ebf_6ull_linux/arch/arm/include",
+                "/home/han/linux/kernel/ebf_6ull_linux/arch/arm/include/generated"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

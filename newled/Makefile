@@ -1,4 +1,4 @@
-KERNELDIR := /home/han/linux/kernel/ebf_6ull_linux
+KERNELDIR := /home/han/linux/kernel/linux-imx-rel_imx_4.1.15_2.1.0_ga
 CURRENT_PATH := $(shell pwd)
 obj-m := newled.o
 

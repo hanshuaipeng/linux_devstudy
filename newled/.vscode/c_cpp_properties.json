@@ -4,9 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/home/han/linux/kernel/ebf_6ull_linux/include",
-                "/home/han/linux/kernel/ebf_6ull_linux/arch/arm/include",
-                "/home/han/linux/kernel/ebf_6ull_linux/arch/arm/include/generated"
+                "/home/han/linux/kernel/linux-imx-rel_imx_4.1.15_2.1.0_ga/include",
+                "/home/han/linux/kernel/linux-imx-rel_imx_4.1.15_2.1.0_ga/arch/arm/include",
+                "/home/han/linux/kernel/linux-imx-rel_imx_4.1.15_2.1.0_ga/arch/arm/include/generated"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

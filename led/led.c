@@ -208,24 +208,24 @@ static int __init chrdev_init(void)
     writel(5,SW_MUX_GPIO4_IO20);
     writel(0x10b0,SW_PAD_GPIO4_IO20);
 /* 设置输出 */
-    vul = readl(GPIO1_DR);
-    vul |= 1<<4;
-    writel(vul,GPIO1_DR);
-
-    vul = readl(GPIO4_DR);
-    vul |= 3<<19;
-    writel(vul,GPIO4_DR);
-
-/* 默认关闭LED */
     vul = readl(GPIO1_GDIR);
-    vul &= ~(1<<4);//
     vul |= 1<<4;
     writel(vul,GPIO1_GDIR);
 
     vul = readl(GPIO4_GDIR);
-    vul &= ~(3<<19);
     vul |= 3<<19;
     writel(vul,GPIO4_GDIR);
+
+/* 默认关闭LED */
+    vul = readl(GPIO1_DR);
+    vul &= ~(1<<4);//
+    vul |= 1<<4;
+    writel(vul,GPIO1_DR);
+
+    vul = readl(GPIO4_DR);
+    vul &= ~(3<<19);
+    vul |= 3<<19;
+    writel(vul,GPIO4_DR);
 
     ret = register_chrdev(CHRDEV_MAJOR, CHRDEV_NAME,
 				  &chrdev_fops);

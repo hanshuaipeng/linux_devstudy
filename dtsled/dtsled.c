@@ -189,22 +189,23 @@ static int __init dtsled_init(void)
 	}
 	else
 	{
-		alloc_chrdev_region(&dtsled.devid, 0, DTS_CNT, DTS_NAME);
-		dtsled.major = MAJOR(dtsled.devid);
-		dtsled.minor = MINOR(dtsled.devid);
+		alloc_chrdev_region(&dtsled.devid, 0, DTS_CNT, DTS_NAME);/* 申请设备号 */
+		dtsled.major = MAJOR(dtsled.devid);/* 获取分配号的主设备号 */
+		dtsled.minor = MINOR(dtsled.devid);/* 获取分配号的次设备号 */
 	}
 	printk("dtsled major=%d,minor=%d\r\n", dtsled. major,dtsled. minor);
-
+	/* 2、初始化 cdev */
 	dtsled.cdev.owner = THIS_MODULE;
 	cdev_init(&dtsled.cdev, &dtsled_fops);
+	/* 3、添加一个 cdev */
 	cdev_add(&dtsled.cdev,dtsled.devid,DTS_CNT);
-
+	/* 4、创建类 */
 	dtsled.class = class_create(THIS_MODULE,DTS_NAME);
 	if(IS_ERR(dtsled.class))
     {
         return PTR_ERR(dtsled.class);
     }
-
+	/* 5、创建设备 */
 	dtsled.device = device_create(dtsled.class,NULL, dtsled.devid, NULL, DTS_NAME);
 	if(IS_ERR(dtsled.device))
     {
@@ -217,6 +218,7 @@ static int __init dtsled_init(void)
 
 static void __exit dtsled_exit(void)
 {
+	/* 取消映射 */
 	iounmap(CCM_CCGR1);
         
     iounmap(SW_MUX_GPIO1_IO04);
@@ -224,6 +226,7 @@ static void __exit dtsled_exit(void)
     iounmap(GPIO1_DR);
     iounmap(GPIO1_GDIR);
 
+	/* 注销字符设备驱动 */
 	cdev_del(&dtsled.cdev);
 	unregister_chrdev_region(dtsled.devid, DTS_CNT); /*注销设备号*/
 

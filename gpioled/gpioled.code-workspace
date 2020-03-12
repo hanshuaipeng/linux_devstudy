@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"ide.h": "c",
+			"types.h": "c",
+			"gpio.h": "c"
+		}
+	}
+}

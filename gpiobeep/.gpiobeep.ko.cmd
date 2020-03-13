@@ -1,0 +1,1 @@
+cmd_/home/han/linux_devstudy/gpiobeep/gpiobeep.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/han/linux_devstudy/gpiobeep/gpiobeep.ko /home/han/linux_devstudy/gpiobeep/gpiobeep.o /home/han/linux_devstudy/gpiobeep/gpiobeep.mod.o

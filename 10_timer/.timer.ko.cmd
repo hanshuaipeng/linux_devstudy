@@ -1,0 +1,1 @@
+cmd_/home/han/linux_devstudy/10_timer/timer.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/han/linux_devstudy/10_timer/timer.ko /home/han/linux_devstudy/10_timer/timer.o /home/han/linux_devstudy/10_timer/timer.mod.o

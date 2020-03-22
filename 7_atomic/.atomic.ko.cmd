@@ -1,0 +1,1 @@
+cmd_/home/han/linux_devstudy/7_atomic/atomic.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/han/linux_devstudy/7_atomic/atomic.ko /home/han/linux_devstudy/7_atomic/atomic.o /home/han/linux_devstudy/7_atomic/atomic.mod.o

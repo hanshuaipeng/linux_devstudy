@@ -1,0 +1,1 @@
+cmd_/home/han/linux_devstudy/8_spinlock/spinlock.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/han/linux_devstudy/8_spinlock/spinlock.ko /home/han/linux_devstudy/8_spinlock/spinlock.o /home/han/linux_devstudy/8_spinlock/spinlock.mod.o

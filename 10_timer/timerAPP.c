@@ -35,6 +35,9 @@ int main(int argc, char *argv[])
     }
     while(1)
     {
+        printf("CMD=1，关闭定时器\r\n");
+        printf("CMD=2，打开定时器\r\n");
+        printf("CMD=3，设置定时器周期，单位是:ms\r\n");
         printf("Input CMD:");
         ret = scanf("%d",&cmd);
         if (ret != 1) { /* 参数输入错误 */

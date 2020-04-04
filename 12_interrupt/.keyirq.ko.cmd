@@ -1,0 +1,1 @@
+cmd_/home/han/linux_devstudy/12_interrupt/keyirq.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/han/linux_devstudy/12_interrupt/keyirq.ko /home/han/linux_devstudy/12_interrupt/keyirq.o /home/han/linux_devstudy/12_interrupt/keyirq.mod.o
